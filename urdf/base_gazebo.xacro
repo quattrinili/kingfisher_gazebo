@@ -32,7 +32,7 @@
 
   <!-- Optional sensor plugins - called by macros defined above -->
   <xacro:if value="$(arg gps)">
-    <xacro:kingfisher_gps_gazebo name="kingfisher"/>
+    <xacro:kingfisher_gps_gazebo name="kingfisher" latitude="$(arg latitude)" longitude="$(arg longitude)"/>
   </xacro:if>
   <xacro:if value="$(arg imu)">
     <xacro:kingfisher_imu_gazebo name="kingfisher"/>
